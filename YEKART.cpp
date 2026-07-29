@@ -743,7 +743,7 @@ void kanglei::check()
 	string yek,yum,sai;
 	char name1[30];
 	char name2[30];
-	char title[100]="C:\\users\\amarj\\Desktop\\Report_";
+	char title[100]; sprintf_s(title, "%s\\Desktop\\Report_", std::getenv("USERPROFILE"));
 //	char title[100]="Report_";
 	char temp;
 	ch2:
@@ -1020,7 +1020,8 @@ void kanglei::getRes()
 {
 	ge1:
 	ofstream out2;
-	char title[100]="C:\\users\\amarj\\Desktop\\";
+	char title[100]; sprintf_s(title, "%s\\Desktop\\", std::getenv("USERPROFILE"));
+
 	char ctr,ctr2,ctr3,ch;
 	ge2:
 	int count=0;
